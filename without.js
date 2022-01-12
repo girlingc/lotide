@@ -1,3 +1,8 @@
+const without = function(arr1, itemsToRemove) {
+  arr1 = arr1.filter(i => !itemsToRemove.includes(i));
+  console.log(`The new array is ${arr1}`);
+};
+
 const eqArrays = function(arr1, arr2) {
   if (arr1 === arr2) return true;
   if (arr1 == null || arr2 == null) return false;
@@ -19,6 +24,11 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 
 
+const words = ["falco", "falcon", "fox", "ness", "pichu", "marth"];
+without(words, ["fox", "falco", "marth", "falcon"]);
+assertArraysEqual(words, ["falco", "falcon", "fox", "ness", "pichu", "marth"]);
 
-assertArraysEqual([null, 2, 'boom'], [null, 2, 'boom']); // Should PASS
-assertArraysEqual(['cool guy', 3, 1, 5, undefined], ['cool guy', 3, 1, 3, undefined]) // Should FAIL
+without([1, 2, 3], [1]) // => [2, 3]
+without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
+
+without([null, undefined, 1, 1.47, 'some', true, ''], [null, undefined, false, ''])
