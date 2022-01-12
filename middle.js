@@ -20,22 +20,18 @@ const assertArraysEqual = function(arr1, arr2) {
 
 
 const middle = function(arr) {
-  const midValue = []
+  const midValue = [];
   if (arr.length <= 2) {
   } else if (arr.length % 2 === 0) {
-    midValue.push(arr[Math.round((arr.length - 2) / 2)])
-    midValue.push(arr[Math.round((arr.length - 1) / 2)])
+    midValue.push(arr[Math.round((arr.length - 2) / 2)]);
+    midValue.push(arr[Math.round((arr.length - 1) / 2)]);
 
   } else {
-    midValue.push(arr[Math.round((arr.length - 1) / 2)])
+    midValue.push(arr[Math.round((arr.length - 1) / 2)]);
   }
-  return midValue
-}
+  return midValue;
+};
 
-console.log(middle(['no', 'no', 'middle', 'no', 'no']))
-console.log(middle(['no', 'no', 'middle 1', 'middle 2', 'no', 'no']))
-console.log(middle(['no']))
-
-assertArraysEqual(middle(['no', 'no', 'middle', 'no', 'no']), ['middle']) // should PASS
-assertArraysEqual(middle(['no', 'no', 'middle1', 'middle2', 'no', 'no']), ['middle1', 'middle2']) // should PASS
-assertArraysEqual(middle(['no', 'no']), []) // should PASS
+assertArraysEqual(middle(['no', 'no', 'middle', 'no', 'no']), ['middle']); // should PASS
+assertArraysEqual(middle(['no', 'no', 'middle1', 'middle2', 'no', 'no']), ['middle1', 'middle2']); // should PASS
+assertArraysEqual(middle(['no', 'no']), []); // should PASS
