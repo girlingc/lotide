@@ -20,11 +20,11 @@ const assertArraysEqual = function(arr1, arr2) {
 
 
 
-const letterPositions = function(sentence) {
+const letterPositions = function(str) {
   const index = {};
-  for (let i = 0; i < sentence.length; i++) {
-    if (sentence[i] !== " ") {
-      index[sentence[i]] ? index[sentence[i]].push(i) : index[sentence[i]] = [i];
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== " ") {
+      index[str[i]] ? index[str[i]].push(i) : index[str[i]] = [i];
     }
   }
   return index;
